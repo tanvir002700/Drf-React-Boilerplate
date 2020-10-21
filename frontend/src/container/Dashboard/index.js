@@ -1,10 +1,7 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../../context/user/context';
+import React from 'react';
 
 
 const Dashboard = props => {
-  const { userState } = useContext(UserContext);
-
   return (
     <h1>Dashboard</h1>
   );

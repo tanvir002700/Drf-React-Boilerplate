@@ -23,7 +23,7 @@ const PrivateRoute = props => {
     if (isAuthenticated) {
       fetchMe();
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated]); // eslint-disable-line
 
   const getPrivateView = componentProps =>
     !Template ? (
