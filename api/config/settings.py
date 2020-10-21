@@ -114,6 +114,9 @@ DJOSER = {
     'SET_PASSWORD_RETYPE': True,
     'PASSWORD_RESET_CONFIRM_RETYPE': True,
     'LOGOUT_ON_PASSWORD_CHANGE': True,
+    'SERIALIZERS': {
+        'current_user': 'users.serializers.UserSerializer'
+    }
 }
 
 AUTHENTICATION_BACKENDS = [

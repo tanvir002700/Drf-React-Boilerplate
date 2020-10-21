@@ -26,10 +26,8 @@ schema_urls = get_schema_view(title=settings.API_BROWSER_HEADER, public=True)
 doc_urls = include_docs_urls(title=settings.API_BROWSER_HEADER)
 drf_urls = include('rest_framework.urls')
 
-djoser_auths_urls = include(('djoser.urls.authtoken', 'djoser-auths'))
 auths_urls = include(('auths.urls', 'auths'))
 
-djoser_user_urls = include(('djoser.urls', 'djoser-users'))
 user_urls = include(('users.urls', 'users'))
 
 
@@ -38,9 +36,8 @@ urlpatterns = [
     path('api/schema/', schema_urls),
     path('api/drf/', drf_urls),
     path('api/admin/', admin.site.urls),
-    path('api/auth/', djoser_auths_urls),
     path('api/auth/', auths_urls),
-    path('api/', djoser_user_urls)
+    path('api/', user_urls)
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
