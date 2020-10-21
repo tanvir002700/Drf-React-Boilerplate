@@ -118,7 +118,6 @@ DJOSER = {
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'auths.backend.ImageBackend',
 ]
 
 
