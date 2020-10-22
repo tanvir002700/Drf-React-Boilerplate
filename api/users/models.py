@@ -6,14 +6,6 @@ from django.contrib.auth.models import (AbstractUser,
 from django.utils.translation import gettext_lazy as _
 
 
-class AbstractAutoFields(models.Model):
-    created_at = models.DateTimeField(auto_now_add=True, editable=False)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        abstract = True
-
-
 class UserManager(DefaultUserManager):
     def _create_user(self, email, password, **extra_fields):
         if not email:
