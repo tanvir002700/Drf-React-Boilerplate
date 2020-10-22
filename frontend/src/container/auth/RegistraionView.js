@@ -30,7 +30,7 @@ const RegistrationView = props => {
 
   return (
     <React.Fragment>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} data-testid='registration-form'>
         <Grid container spacing={1}>
           <Grid item xs={12}>
             <Grid container alignItems="center" justify="center">
@@ -43,6 +43,7 @@ const RegistrationView = props => {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              data-testid="email-field"
               id="email-field"
               label="Email"
               type="email"
@@ -58,6 +59,7 @@ const RegistrationView = props => {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              data-testid="password-field"
               id="password-field"
               label="Password"
               type="password"
@@ -73,6 +75,7 @@ const RegistrationView = props => {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              data-testid="re-password-field"
               id="re-password-field"
               label="Password Confirm"
               type="password"
@@ -87,7 +90,14 @@ const RegistrationView = props => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="primary" fullWidth>Register</Button>
+            <Button
+              data-testid="submit"
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth>
+                Register
+            </Button>
           </Grid>
           <Grid item xs={12}>
             <Grid container alignItems="center" justify="center">

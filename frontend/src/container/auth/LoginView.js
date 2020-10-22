@@ -28,7 +28,7 @@ const LoginView = props => {
 
   return (
     <React.Fragment>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} data-testid='login-form'>
         <Grid container spacing={1}>
           <Grid item xs={12}>
             <Grid container alignItems="center" justify="center">
@@ -41,6 +41,7 @@ const LoginView = props => {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              data-testid="email-field"
               id="email-field"
               label="Email"
               type="email"
@@ -54,6 +55,7 @@ const LoginView = props => {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              data-testid="password-field"
               id="password-field"
               label="Password"
               type="password"
@@ -66,7 +68,14 @@ const LoginView = props => {
             />
           </Grid>
           <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="primary" fullWidth>Login</Button>
+            <Button
+              data-testid="submit"
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth>
+                Login
+            </Button>
           </Grid>
           <Grid item xs={12}>
             <Grid container alignItems="center" justify="center">
