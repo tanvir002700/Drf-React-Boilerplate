@@ -1,3 +1,2 @@
-# Kinbokoi Ecommerce App
+# Drf-React-Boilerplate
 
-Grocery e-commerce web app for kinbokoi.com.bd
